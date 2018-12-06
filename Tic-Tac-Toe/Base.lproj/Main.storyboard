@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Zapfino.ttf">
+            <string>Zapfino</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -123,15 +128,40 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="se9-I0-7e8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eu-RX-3ZU">
+                                <rect key="frame" x="94" y="14.5" width="186" height="135.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="FN5-zO-IWw"/>
+                                    <constraint firstAttribute="height" constant="135.5" id="fgy-dW-4RN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="40"/>
+                                <color key="textColor" red="0.36302187298484423" green="0.8232868020304569" blue="0.16131690145334751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoE-U6-0IN">
+                                <rect key="frame" x="126" y="536" width="123" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="4r5-iD-0RY"/>
+                                    <constraint firstAttribute="height" constant="45" id="Dgm-jH-Xh8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.36407089233398438" green="0.82155895233154297" blue="0.16015547513961792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XqO-0r-LfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Y5-PI-fck"/>
+                            <constraint firstItem="0eu-RX-3ZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2eZ-xA-9eh"/>
                             <constraint firstItem="KZb-c8-dWf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="36Y-aX-Hxr"/>
                             <constraint firstItem="jgQ-hF-uHB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3QF-c1-cWK"/>
                             <constraint firstItem="ua3-CX-FaL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4e2-o2-cAf"/>
+                            <constraint firstItem="ua3-CX-FaL" firstAttribute="top" secondItem="0eu-RX-3ZU" secondAttribute="bottom" constant="15" id="BfP-Ix-v80"/>
                             <constraint firstItem="8lY-hc-mBL" firstAttribute="top" secondItem="WqO-IK-m4b" secondAttribute="bottom" constant="41.5" id="E5c-7l-eeL"/>
+                            <constraint firstItem="LoE-U6-0IN" firstAttribute="top" secondItem="ua3-CX-FaL" secondAttribute="bottom" constant="34" id="ENL-KO-5xz"/>
                             <constraint firstItem="KZb-c8-dWf" firstAttribute="top" secondItem="bPB-TX-wzf" secondAttribute="bottom" constant="41.5" id="Ggi-7N-4wH"/>
+                            <constraint firstItem="LoE-U6-0IN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NJo-5B-A7g"/>
                             <constraint firstItem="8lY-hc-mBL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tym-Px-KgU"/>
                             <constraint firstItem="2dg-5k-BVu" firstAttribute="top" secondItem="jgQ-hF-uHB" secondAttribute="bottom" constant="47" id="YSJ-qO-aY9"/>
                             <constraint firstItem="b4P-M1-gSf" firstAttribute="leading" secondItem="XqO-0r-LfP" secondAttribute="trailing" constant="33.5" id="bbk-Pk-rsQ"/>
@@ -149,6 +179,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playAgainButton" destination="LoE-U6-0IN" id="yuW-sO-2Ee"/>
+                        <outlet property="winnerLabel" destination="0eu-RX-3ZU" id="Fjd-wv-oSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

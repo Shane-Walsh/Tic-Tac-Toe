@@ -14,24 +14,30 @@ class ViewController: UIViewController {
 
     var activePlayer = 1
     
+    var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0,]  // 0 - empty, 1 - noughts, 2 - crosses
+    
     @IBAction func buttonPressed(_ sender: Any) {
         
-        if activePlayer == 1 {
+        let activePosition = (sender as AnyObject).tag - 1
+        
+        if gameState[activePosition] == 0 {
             
-             (sender as AnyObject).setImage(UIImage(named: "nought.png"), for: [])
+            gameState[activePosition] = activePlayer
             
-             activePlayer = 2
-            
-        } else {
-            
-            (sender as AnyObject).setImage(UIImage(named: "cross.png"), for: [])
-            
-            activePlayer = 1
+            if activePlayer == 1 {
+                
+                 (sender as AnyObject).setImage(UIImage(named: "nought.png"), for: [])
+                
+                 activePlayer = 2
+                
+            } else {
+                
+                (sender as AnyObject).setImage(UIImage(named: "cross.png"), for: [])
+                
+                activePlayer = 1
+            }
         }
-        
        
-        
-        print((sender as AnyObject).tag)
     }
     
     override func viewDidLoad() {

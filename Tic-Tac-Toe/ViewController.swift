@@ -14,6 +14,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playAgainButton: UIButton!
     
+    @IBAction func playAgain(_ sender: Any) {
+        
+        activePlayer = 1
+        
+        activeGame = true
+        
+        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0,]
+        
+        for i in 1..<10 {
+            
+            if let button = view.viewWithTag(i) as? UIButton {
+                
+                button.setImage(nil, for: [])
+            }
+            
+            winnerLabel.isHidden = true
+            playAgainButton.isHidden = true
+            
+            winnerLabel.center = CGPoint(x: winnerLabel.center.x - 500, y: winnerLabel.center.y)
+            playAgainButton.center = CGPoint(x: playAgainButton.center.x - 500, y: playAgainButton.center.y)
+        }
+    }
     
     // noughts = 1, crosses = 2
 
@@ -54,17 +76,33 @@ class ViewController: UIViewController {
                     
                     activeGame = false
                     
-                    print(gameState[combination[0]])
+                    winnerLabel.isHidden = false
+                    playAgainButton.isHidden = false
                     
-                }
+                    //print(gameState[combination[0]])
+                    
+                    UIView.animate(withDuration: 1, animations: {
+                  
+                        self.winnerLabel.center = CGPoint(x: self.winnerLabel.center.x + 500, y: self.winnerLabel.center.y)
+                        self.playAgainButton.center = CGPoint(x: self.self.playAgainButton.center.x + 500, y: self.playAgainButton.center.y)
+                })
             }
         }
-       
     }
+}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Initialise views
+        
+        winnerLabel.isHidden = true
+        playAgainButton.isHidden = true
+        
+        // Set label & button offscreen initailly
+        
+        winnerLabel.center = CGPoint(x: winnerLabel.center.x - 500, y: winnerLabel.center.y)
+        playAgainButton.center = CGPoint(x: playAgainButton.center.x - 500, y: playAgainButton.center.y)
     }
 
     override func didReceiveMemoryWarning() {

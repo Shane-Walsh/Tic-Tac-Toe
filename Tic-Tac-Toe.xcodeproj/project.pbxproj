@@ -16,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B25F9EC221BAE60700AF3919 /* mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainscreen.png; path = ../../../../../Desktop/TicTacToe/mainscreen.png; sourceTree = "<group>"; };
+		B25F9EC321BAE61300AF3919 /* winnerscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = winnerscreen.png; path = ../../../../../Desktop/TicTacToe/winnerscreen.png; sourceTree = "<group>"; };
 		B288D32D21B985BB00298792 /* Tic-Tac-Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B288D33021B985BB00298792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B288D33221B985BB00298792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +39,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B25F9EC121BAE5CC00AF3919 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				B25F9EC221BAE60700AF3919 /* mainscreen.png */,
+				B25F9EC321BAE61300AF3919 /* winnerscreen.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		B288D32421B985BB00298792 = {
 			isa = PBXGroup;
 			children = (
+				B25F9EC121BAE5CC00AF3919 /* Screenshots */,
 				B288D32F21B985BB00298792 /* Tic-Tac-Toe */,
 				B288D32E21B985BB00298792 /* Products */,
 			);
@@ -56,15 +68,47 @@
 		B288D32F21B985BB00298792 /* Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
-				B288D33021B985BB00298792 /* AppDelegate.swift */,
-				B288D33221B985BB00298792 /* ViewController.swift */,
-				B288D33421B985BB00298792 /* Main.storyboard */,
-				B288D33A21B985BB00298792 /* Assets.xcassets */,
-				B288D33C21B985BB00298792 /* LaunchScreen.storyboard */,
+				B2F8626021BADB7800AAACCE /* SupportFiles */,
+				B2F8625F21BADB6800AAACCE /* Resources */,
+				B2F8625E21BADB4800AAACCE /* Views */,
+				B2F8625D21BADB3200AAACCE /* Controllers */,
 				B288D33F21B985BB00298792 /* Info.plist */,
-				B288D33721B985BB00298792 /* Tic_Tac_Toe.xcdatamodeld */,
 			);
 			path = "Tic-Tac-Toe";
+			sourceTree = "<group>";
+		};
+		B2F8625D21BADB3200AAACCE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B288D33221B985BB00298792 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B2F8625E21BADB4800AAACCE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B288D33421B985BB00298792 /* Main.storyboard */,
+				B288D33C21B985BB00298792 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B2F8625F21BADB6800AAACCE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B288D33A21B985BB00298792 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B2F8626021BADB7800AAACCE /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B288D33721B985BB00298792 /* Tic_Tac_Toe.xcdatamodeld */,
+				B288D33021B985BB00298792 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

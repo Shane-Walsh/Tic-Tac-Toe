@@ -18,6 +18,7 @@
 /* Begin PBXFileReference section */
 		B25F9EC221BAE60700AF3919 /* mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainscreen.png; path = ../../../../../Desktop/TicTacToe/mainscreen.png; sourceTree = "<group>"; };
 		B25F9EC321BAE61300AF3919 /* winnerscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = winnerscreen.png; path = ../../../../../Desktop/TicTacToe/winnerscreen.png; sourceTree = "<group>"; };
+		B25F9EC421BAE80600AF3919 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B288D32D21B985BB00298792 /* Tic-Tac-Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B288D33021B985BB00298792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B288D33221B985BB00298792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		B288D32421B985BB00298792 = {
 			isa = PBXGroup;
 			children = (
+				B25F9EC421BAE80600AF3919 /* README.md */,
 				B25F9EC121BAE5CC00AF3919 /* Screenshots */,
 				B288D32F21B985BB00298792 /* Tic-Tac-Toe */,
 				B288D32E21B985BB00298792 /* Products */,
